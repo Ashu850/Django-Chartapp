@@ -1,0 +1,37 @@
+{% extends 'base.html' %} 
+
+{% block head %} 
+
+{% endblock %} 
+
+{% block content %} 
+<h2>highcharts</h2>
+<div id="container"></div>
+{{dataset}}
+<script>
+    Highcharts.chart('container',{
+        chart:{
+            type:'column'
+        },
+
+        title:{
+            text:'Historic World Population by Region'
+        },
+
+        xAxis: {
+            categories: {{categories|safe}}
+        },
+        series: [{
+            name: 'Survived',
+            data: {{ survived_series }},
+            color:'green',
+        }, {
+            name: 'Not survived',
+            data: {{ not_survived_series }},
+            color:'red',
+        }], 
+
+
+    });
+</script>
+{% endblock %} 

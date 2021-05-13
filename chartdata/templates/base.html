@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.1.1/dist/chart.min.js"></script>    
+    
+    <!-- high chart.js-->
+    <script src="https://code.highcharts.com/highcharts.src.js"></script>
+    <!--google fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+   
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <!--boxi icons-->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    
+    <!-- J query include-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src=" https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+          
+    <title>Django char.js</title>
+    <style>
+        header{
+            display: flex;
+            background: #297eec;
+            width: 100%;
+            margin: auto;
+            height: 10vh;
+            align-items: center;
+        }
+       
+        .nav-logo{
+            color: white;
+            width: 300px;
+            flex: 1;
+            text-align: center;
+
+        }
+
+        .logo-heading{
+            font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
+
+        }        
+
+
+       
+        
+        
+    </style>
+
+    {% block head %} 
+
+    {% endblock %} 
+</head>
+<body>
+<header>
+    <div class="nav-logo">
+        <h4 class="logo-heading">Chart.js</h4>
+    </div>
+        
+</header> 
+
+  <div class="container-fluid">
+    {% if messages %} 
+
+    {% for message in messages %} 
+
+        <div class="alert alert-success">{{message}}</div>
+    {% endfor %} 
+
+    {% endif %} 
+    {% block content %} 
+    
+    {% endblock %} 
+  </div>
+
+<script>
+    
+
+</script>  
+</body>
+</html>
